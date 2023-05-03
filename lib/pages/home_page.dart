@@ -41,9 +41,10 @@ class HomePage extends StatelessWidget {
           }
         },
       ),
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: () => context.read<CatFactBloc>().add(LoadRandomCatFact()),
-        child: Icon(Icons.refresh),
+        icon: Text('Another Fact!'),
+        label: Icon(Icons.refresh),
       ),
     );
   }
